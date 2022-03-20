@@ -14,18 +14,20 @@
   </div> -->
 
   <div class="container">
-    
     <!-- <router-view ></router-view> -->
 
     <!-- left sidebar -->
 
     <!-- <router-view name="LeftSidebar" class="view left-sidebar"></router-view> -->
-    <router-view v-slot="{ Component }" name="LeftSidebar" class="view left-sidebar">
+    <router-view
+      v-slot="{ Component }"
+      name="LeftSidebar"
+      class="view left-sidebar"
+    >
       <transition name="slide" mode="out-in">
         <component :is="Component" :key="$route.path"></component>
       </transition>
     </router-view>
-
 
     <!-- main -->
     <router-view :key="$route.path" class="main-view"></router-view>
@@ -35,9 +37,6 @@
         <component :is="Component" :key="$route.path"></component>
       </transition>
     </router-view> -->
-
-    
-
   </div>
 </template>
 
@@ -69,13 +68,13 @@ export default {
   opacity: 0;
   transform: translateX(-30%);
 }
-.container{
+.container {
   display: flex;
 }
-.left-sidebar{
+.left-sidebar {
   width: 20%;
 }
-.main-view{
+.main-view {
   width: 100%;
 }
 </style>
