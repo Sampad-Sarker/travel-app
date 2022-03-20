@@ -26,6 +26,7 @@
       </transition>
     </router-view>
 
+
     <!-- main -->
     <router-view :key="$route.path" class="main-view"></router-view>
 
